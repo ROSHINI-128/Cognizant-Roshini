@@ -1,0 +1,2194 @@
+<!--Setting Up Bootstrap 5
+Exercise 1.1: Create a basic HTML page and link Bootstrap 5 via CDN.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 CDN Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rqbsyq/WlYpS4/XlJ0c20v/h5n4p5w5t1s5j5b5a5c5d5e5f5g5h5i5j5k5l5m5n5o5p5q5r5s5t5u5v5w5x5y5z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, Bootstrap 5!</h1>
+        <button class="btn btn-primary">Click Me</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoT17VDqI+1QpL9F2c3b5v5y5d5e5f5g5h5i5j5k5l5m5n5o5p5q5r5s5t5u5v5w5x5y5z" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--Exercise 1.2:Set up a project using npm or downloaded Bootstrap files. Use the downloaded files in a sample HTML page.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Local Project</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Hello from Local Bootstrap!</h1>
+        <p>This page is styled using Bootstrap files installed via npm.</p>
+        <button class="btn btn-success">Local Button</button>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!--2. Bootstrap Structure and Files
+Exercise 2.1:
+Explore the structure of the downloaded Bootstrap directory. Identify and explain the purpose of
+the CSS, JS, and icons folders.
+Exercise 2.2:
+Modify your HTML to include Bootstrap's JavaScript plugins via bootstrap.bundle.min.js.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap JS Plugins Example</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Bootstrap JavaScript in Action</h1>
+        <p>This page uses Bootstrap's JavaScript bundle.</p>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Launch demo modal
+        </button>
+
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        This is a simple modal.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
+<!--3. Fundamentals of Responsive Grid Layout
+Exercise 3.1:
+Create a container with three columns that stack vertically on mobile, two-per-row on tablets,
+and three-per-row on desktops.
+Exercise 3.2:
+Use .container, .row, and .col-* classes appropriately for responsive design.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <style>
+        .col-content {
+            background-color: #f8d7da;
+            border: 1px solid #dc3545; 
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Responsive Columns Example</h2>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-content">Column 1</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-content">Column 2</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-content">Column 3</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<!--4. Image Gallery for Community Events
+Scenario: Show images from past events in a table layout.
+Objective: Work with <img>, tables, and formatting tags.
+Task:
+• Use a <table> with 2 rows and 3 columns of <img> tags
+• Include alt, title, and style each image with borders using a class
+• Add a caption to describe each event
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events Image Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <style>
+        .img-border {
+            border: 3px solid #007bff; 
+            border-radius: 5px;
+            max-width: 100%;
+            height: auto; 
+            display: block; 
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center; 
+            vertical-align: top; 
+        }
+
+        td p {
+            margin-top: 10px; 
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Community Events Image Gallery</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Memorable Moments from Our Community Events</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://via.placeholder.com/250x180?text=Event+1"
+                             alt="Community Picnic"
+                             title="Annual Community Picnic"
+                             class="img-border">
+                        <p>A lovely day at the Annual Community Picnic, enjoyed by all families.</p>
+                    </td>
+                    <td>
+                        <img src="https://via.placeholder.com/250x180?text=Event+2"
+                             alt="Volunteer Cleanup"
+                             title="Park Cleanup Day"
+                             class="img-border">
+                        <p>Volunteers working hard during the Park Cleanup Day to beautify our neighborhood.</p>
+                    </td>
+                    <td>
+                        <img src="https://via.placeholder.com/250x180?text=Event+3"
+                             alt="Summer Festival"
+                             title="Our Lively Summer Festival"
+                             class="img-border">
+                        <p>The Summer Festival brought music, food, and joy to the entire community.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://via.placeholder.com/250x180?text=Event+4"
+                             alt="Kids' Art Workshop"
+                             title="Creative Kids Art Workshop"
+                             class="img-border">
+                        <p>Young artists unleashing their creativity at the Kids' Art Workshop.</p>
+                    </td>
+                    <td>
+                        <img src="https://via.placeholder.com/250x180?text=Event+5"
+                             alt="Senior Tea Party"
+                             title="Elegant Senior Tea Party"
+                             class="img-border">
+                        <p>Seniors enjoying a Tea</p>
+                    </td>
+                    <td>
+                        <img src="https://via.placeholder.com/250x180?text=Event+6"
+                             alt="Local Marathon"
+                             title="Community Marathon Finish Line"
+                             class="img-border">
+                        <p>Participants crossing the finish line.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+<!--5. Alignment and Reordering in Grid
+Exercise 5.1:
+Use justify-content-center and align-items-center to center content inside a row.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering Content in Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .centered-content {
+            background-color: #d1ecf1; /* Light blue background */
+            border: 1px solid #00a4ff; /* Blue border */
+            height: 200px; /* Give some height to see vertical alignment */
+            display: flex; /* Ensure flex properties apply */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            font-size: 1.5rem;
+            color: #0c5460;
+        }
+        /* Style for the columns to make them visible */
+        .col-item {
+            background-color: #ffeeba; /* Light yellow */
+            border: 1px solid #ffc107; /* Orange border */
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Centering Content Example</h2>
+        <div class="row justify-content-center align-items-center" style="min-height: 300px; border: 2px dashed #6c757d;">
+            <div class="col-md-6">
+                <div class="centered-content">
+                    This content is centered!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-item">
+                    Another column aligned by row
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Centering individual column content (if needed)</h3>
+        <div class="row">
+            <div class="col-12">
+                <div class="col-item centered-content">
+                    This column's content is also centered internally.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---Exercise 5.2:
+Reorder columns on different screen sizes using order-md-2, order-md-1.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reordering Columns</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .reorder-col {
+            background-color: #f0f8ff; /* AliceBlue */
+            border: 1px solid #17a2b8; /* Info blue */
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .col-orange { background-color: #ffdab9; border-color: #fd7e14; } /* PeachPuff */
+        .col-green { background-color: #d4edda; border-color: #28a745; } /* Light green */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Column Reordering Example</h2>
+        <p>Resize your browser window to see the columns reorder on medium screens (md) and above.</p>
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-2">
+                <div class="reorder-col col-orange">
+                    <h3>Column A (Order 2 on MD)</h3>
+                    <p>On small screens, I am first. On medium and larger screens, I move to the second position.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-md-1">
+                <div class="reorder-col col-green">
+                    <h3>Column B (Order 1 on MD)</h3>
+                    <p>On small screens, I am second. On medium and larger screens, I move to the first position.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--6. Responsive Flexbox Utilities
+Exercise 7.1:
+Create a navbar using d-flex, flex-column, and flex-md-row for responsive behavior.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Flexbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .navbar-custom {
+            background-color: #343a40; 
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .navbar-custom .nav-link {
+            color: #ffffff; 
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #ced4da; 
+        }
+        .navbar-brand-custom {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767.98px) {
+            .navbar-custom .nav-item {
+                margin-bottom: 0.25rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Responsive Navbar Example</h2>
+        <p>Resize your browser to see the navbar change direction.</p>
+
+        <nav class="navbar-custom d-flex flex-column flex-md-row justify-content-md-between align-items-md-center">
+            <a class="navbar-brand-custom" href="#">MyBrand</a>
+
+            <div class="d-flex flex-column flex-md-row">
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--Exercise 7.2:
+Use justify-content-between and align-items-center in a card layout.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout with Flexbox Alignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Card Layout with Flexbox Alignment</h2>
+
+        <div class="card" style="width: 28rem;">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Card Header Title</span>
+                <button class="btn btn-sm btn-primary">Action</button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-around">
+                <a href="#" class="text-success">View Details</a>
+                <a href="#" class="text-danger">Delete Item</a>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Another Card Example (Different Alignment)</h3>
+        <div class="card" style="width: 28rem;">
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title">Centered Content</h5>
+                <p class="card-text text-center">This content within the card body is vertically and horizontally.</p>
+                <button class="btn btn-info mt-2">More Info</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<!--7. Typography
+Exercise 7.1:
+Create a sample page with different Bootstrap typography utilities: display-1, lead, text-muted,
+fw-bold, etc.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Typography Utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Bootstrap Typography Examples</h1>
+
+        <h1 class="display-1">Display 1 Heading</h1> <h2 class="display-4">Display 4 Heading</h2> <p class="mb-4">These are larger.</p>
+
+        <p class="lead">
+            This is a lead paragraph.
+        </p>
+
+        <p>
+            This is regular text.
+            <span class="text-muted">This portion of the text is muted.</span> 
+        </p>
+
+        <p>
+            This text is <span class="fw-bold">bolded using fw-bold</span>. [cite: 13]
+            This text is <span class="fw-bolder">extra bold using fw-bolder</span>.
+            This text is <span class="fw-normal">normal weight using fw-normal</span>.
+            This text is <span class="fw-light">light weight using fw-light</span>.
+            And this text is <span class="fst-italic">italic using fst-italic</span>.
+        </p>
+
+        <blockquote class="blockquote">
+            <p>A well-known quote or a piece of highlighted text.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+
+        <ul class="list-unstyled">
+            <li>This is a list item without default list styling.</li>
+            <li>No bullets and no left margin.</li>
+            <li>Great for custom list designs.</li>
+        </ul>
+
+        <p>You can use <mark>mark</mark> to highlight text, <del>del</del> to strike through, <s>s</s> for no longer relevant, <ins>ins</ins> for inserted text, <u>u</u> for underlined, <small>small</small> for smaller text, and <strong>strong</strong> for important text.</p>
+    </div>
+
+</body>
+</html>
+<!---Exercise 7.2:
+Use text-uppercase, text-lowercase, text-capitalize.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformation Utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Text Transformation Examples</h2>
+
+        <p class="text-uppercase">This text will appear in all uppercase letters. [cite: 13]</p>
+        <p class="text-lowercase">THIS TEXT WILL APPEAR IN ALL LOWERCASE LETTERS. [cite: 13]</p>
+        <p class="text-capitalize">this text will have each word capitalized. [cite: 13]</p>
+
+        <hr>
+
+        <h3>Combined Example:</h3>
+        <p class="lead text-capitalize">
+            Here is a sample paragraph using text-capitalize to make the first letter of each word uppercase, along with the lead class for emphasis.
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--8. Forms
+Exercise 8.1:
+Create a registration form using Bootstrap form components like form-control, form-check, and
+input-group.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Register for an Account</h2>
+        <form>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Minimum 8 characters" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Username (with Input Group)</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="form-text">Your public username for display.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" aria-label="Select your country">
+                    <option selected>Select your country...</option>
+                    <option value="1">United States</option>
+                    <option value="2">Canada</option>
+                    <option value="3">United Kingdom</option>
+                    <option value="4">Australia</option>
+                    <option value="5">India</option>
+                </select>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">I agree to the <a href="#">terms and conditions</a></label>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="radio" class="form-check-input" name="gender" id="radioMale" value="male">
+                <label class="form-check-label" for="radioMale">Male</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="radio" class="form-check-input" name="gender" id="radioFemale" value="female">
+                <label class="form-check-label" for="radioFemale">Female</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 8.2:
+Style a login form using form-floating.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Floating Label Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background for the page */
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">
+                        Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2">Sign in</button>
+                <p class="text-center mt-3 mb-0">
+                    <a href="#">Forgot password?</a> | <a href="#">Sign up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--9. Buttons
+Exercise 9.1:
+Create buttons using all contextual classes: btn-primary, btn-secondary, btn-outline-*, etc.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Button Contextual Classes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .btn-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .btn-section .btn {
+            margin: 5px; /* Add some space between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Bootstrap Button Examples</h2>
+
+        <div class="btn-section">
+            <h3>Solid Buttons</h3>
+            <button type="button" class="btn btn-primary">Primary Button</button>
+            <button type="button" class="btn btn-secondary">Secondary Button</button>
+            <button type="button" class="btn btn-success">Success Button</button>
+            <button type="button" class="btn btn-danger">Danger Button</button>
+            <button type="button" class="btn btn-warning">Warning Button</button>
+            <button type="button" class="btn btn-info">Info Button</button>
+            <button type="button" class="btn btn-light">Light Button</button>
+            <button type="button" class="btn btn-dark">Dark Button</button>
+            <button type="button" class="btn btn-link">Link Button</button>
+        </div>
+
+        <div class="btn-section">
+            <h3>Outline Buttons</h3>
+            <button type="button" class="btn btn-outline-primary">Primary Outline</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+            <button type="button" class="btn btn-outline-success">Success Outline</button>
+            <button type="button" class="btn btn-outline-danger">Danger Outline</button>
+            <button type="button" class="btn btn-outline-warning">Warning Outline</button>
+            <button type="button" class="btn btn-outline-info">Info Outline</button>
+            <button type="button" class="btn btn-outline-light">Light Outline</button>
+            <button type="button" class="btn btn-outline-dark">Dark Outline</button>
+        </div>
+
+        <div class="btn-section">
+            <h3>Button Sizes</h3>
+            <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+            <button type="button" class="btn btn-secondary">Default Button</button>
+            <button type="button" class="btn btn-success btn-sm">Small Button</button>
+        </div>
+
+        <div class="btn-section">
+            <h3>Disabled State</h3>
+            <button type="button" class="btn btn-primary" disabled>Primary Disabled</button>
+            <button type="button" class="btn btn-outline-secondary" disabled>Secondary Disabled</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 9.2:
+Add button groups using btn-group, and create toggle buttons with checkboxes-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Button Groups and Toggles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .btn-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Button Groups and Toggle Buttons</h2>
+
+        <div class="btn-section">
+            <h3>Basic Button Group</h3>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Left</button>
+                <button type="button" class="btn btn-secondary">Middle</button>
+                <button type="button" class="btn btn-secondary">Right</button>
+            </div>
+        </div>
+
+        <div class="btn-section">
+            <h3>Button Group with Dropdown</h3>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-section">
+            <h3>Toggle Buttons (Checkbox-based)</h3>
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+            </div>
+
+            <h4 class="mt-4">Toggle Buttons</h4>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-success" for="btnradio1">Radio 1</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio2">Radio 2</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio3">Radio 3</label>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!---10. Navbars and Navigation
+Exercise 10.1:
+Create a responsive navbar with logo, navigation links, and a search form.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/30x30?text=LOGO" alt="Company Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                MyCompany
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h3>Navbar Demo</h3>
+        <p>Resize your browser to see the navigation links collapse into a toggler icon on smaller screens.</p>
+        <p>The logo, navigation links, and search form are all integrated.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--Exercise 10.2:
+Use nav, nav-tabs, nav-pills for creating tabbed navigation.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Navigation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Tabbed Navigation Examples</h2>
+
+        <h3 class="mt-4">Navigation Tabs</h3>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+            </li>
+        </ul>
+        <div class="tab-content border border-top-0 p-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <h5>Home Content</h5>
+                <p>This is the content for the Home tab. It's usually dynamic based on the selected tab.</p>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <h5>Profile Settings</h5>
+                <p>Here you can manage your profile information and settings.</p>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <h5>Contact Us</h5>
+                <p>Feel free to reach out to us. Our team is ready to assist you.</p>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Navigation Pills</h3>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#pills-dashboard" type="button" role="tab" aria-controls="pills-dashboard" aria-selected="true">Dashboard</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-reports-tab" data-bs-toggle="pill" data-bs-target="#pills-reports" type="button" role="tab" aria-controls="pills-reports" aria-selected="false">Reports</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-settings-tab" data-bs-toggle="pill" data-bs-target="#pills-settings" type="button" role="tab" aria-controls="pills-settings" aria-selected="false">Settings</button>
+            </li>
+        </ul>
+        <div class="tab-content border p-3" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-dashboard" role="tabpanel" aria-labelledby="pills-dashboard-tab">
+                <h5>Your Dashboard Overview</h5>
+                <p>Welcome to your personalized dashboard! See your latest activities.</p>
+            </div>
+            <div class="tab-pane fade" id="pills-reports" role="tabpanel" aria-labelledby="pills-reports-tab">
+                <h5>Detailed Reports</h5>
+                <p>Access and download various reports here.</p>
+            </div>
+            <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
+                <h5>Application Settings</h5>
+                <p>Configure your application preferences.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--11. Cards and Media Objects
+Exercise 11.1:
+Create a profile card using card, card-body, card-title, and card-img-top.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .profile-card {
+            max-width: 300px; /* Limit card width for better appearance */
+            margin: 20px auto; /* Center the card */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: add a subtle shadow */
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures image covers the area nicely */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Profile Card Example</h2>
+
+        <div class="card profile-card">
+            <img src="https://via.placeholder.com/400x200?text=Profile+Image" class="card-img-top" alt="Profile Picture of Jane Doe">
+            <div class="card-body">
+                <h5 class="card-title">Jane Doe</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Software Engineer</h6>
+                <p class="card-text">Jane is a passionate software engineer with 5 years of experience in web development, specializing in front-end technologies.</p>
+                <a href="#" class="btn btn-primary">View Profile</a>
+                <a href="#" class="btn btn-outline-secondary mt-2">Contact</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 11.2:
+Design a media object layout using media and align an image to the left of the content.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Object Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .media-object-container {
+            border: 1px solid #dee2e6; /* Light gray border */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa; /* Light background */
+        }
+        .media-object-img {
+            width: 100px; /* Fixed width for the image */
+            height: 100px; /* Fixed height for the image */
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Media Object Layout Example</h2>
+
+        <div class="d-flex media-object-container">
+            <img src="https://via.placeholder.com/100x100?text=User" class="media-object-img me-3" alt="User Avatar">
+            <div>
+                <h5 class="mt-0">User Comment Title</h5>
+                <p>This is some example content for the media object. It could be a user comment, a news article snippet, or any block of content that needs an associated image or avatar on one side.</p>
+                <small class="text-muted">Posted 2 days ago</small>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center media-object-container">
+            <img src="https://via.placeholder.com/100x100?text=Product" class="media-object-img me-3" alt="Product Image">
+            <div>
+                <h5 class="mt-0">Product Highlight</h5>
+                <p>Featuring our new product, designed for efficiency and user-friendliness. Available now for a limited time!</p>
+            </div>
+        </div>
+
+        <div class="d-flex media-object-container">
+            <img src="https://via.placeholder.com/100x100?text=Parent" class="media-object-img me-3" alt="Parent Commenter">
+            <div>
+                <h5 class="mt-0">Parent Comment</h5>
+                <p>This is a main comment from a user. Media objects are very flexible for showcasing content alongside an image.</p>
+
+                <div class="d-flex mt-3">
+                    <img src="https://via.placeholder.com/60x60?text=Reply" class="media-object-img me-3" alt="Reply Avatar" style="width: 60px; height: 60px;">
+                    <div>
+                        <h6 class="mt-0">Reply from Another User</h6>
+                        <p>And this is a nested media object, demonstrating a reply or sub-content within the main media object.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--12. Spacing Utilities
+Exercise 12.1:
+Apply margin (m-3, mt-4) and padding (p-2, py-5) utilities on layout sections.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Spacing Utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .box {
+            background-color: #e9ecef; /* Light gray background */
+            border: 1px solid #ced4da; /* Gray border */
+            text-align: center;
+            font-weight: bold;
+        }
+        .section-separator {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-top: 1px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Spacing Utilities Examples</h2>
+
+        <div class="box m-3 p-2">
+            Element with m-3 (all sides margin) and p-2 (all sides padding)
+        </div>
+
+        <div class="box mt-4 py-5">
+            Element with mt-4 (top margin) and py-5 (vertical padding)
+        </div>
+
+        <div class="box mx-auto px-4" style="width: 70%;">
+            Element with mx-auto (horizontal center) and px-4 (horizontal padding)
+        </div>
+
+        <div class="box mb-5 p-4">
+            Element with mb-5 (bottom margin) and p-4 (all sides padding)
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3 class="mt-5">Responsive Spacing</h3>
+        <div class="box mx-auto mb-4" style="max-width: 400px;">
+            <p class="mb-0">This box has horizontal margin auto (`mx-auto`).</p>
+        </div>
+        <div class="box m-0 m-sm-2 m-lg-4 p-3">
+            <p class="mb-0">Margin changes based on screen size: `m-0` (mobile), `m-sm-2` (small+), `m-lg-4` (large+).</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!----
+Exercise 12.2:
+Build a pricing section where spacing improves the layout-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Section with Spacing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .pricing-card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            text-align: center;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            height: 100%; /* Ensure cards are same height in a row */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute space vertically */
+        }
+        .pricing-header {
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Our Pricing Plans</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="fw-normal">Basic</h4>
+                        <h1 class="display-5 fw-bold">$19<small class="text-muted fw-light">/mo</small></h1>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="list-unstyled">
+                            <li>10 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary mt-auto">Sign up for free</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="fw-normal">Pro</h4>
+                        <h1 class="display-5 fw-bold">$49<small class="text-muted fw-light">/mo</small></h1>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="list-unstyled">
+                            <li>20 users included</li>
+                            <li>10 GB of storage</li>
+                            <li>Priority email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="w-100 btn btn-lg btn-primary mt-auto">Get started</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="fw-normal">Enterprise</h4>
+                        <h1 class="display-5 fw-bold">$99<small class="text-muted fw-light">/mo</small></h1>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="list-unstyled">
+                            <li>50 users included</li>
+                            <li>50 GB of storage</li>
+                            <li>Phone & email support</li>
+                            <li>Dedicated help center</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-dark mt-auto">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--13. Colors and Backgrounds
+Exercise 13.1:
+Create a dashboard page using contextual background classes (bg-primary, bg-warning, etc.) and
+text colors.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard with Contextual Colors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .dashboard-card {
+            min-height: 120px; /* Give cards a consistent height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-radius: 0.5rem; /* Slightly rounded corners */
+            text-align: center;
+        }
+        .text-white-shadow {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Optional: add shadow for better readability on dark backgrounds */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-light py-4">
+        <h2 class="text-center mb-4">My Dashboard Overview</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="dashboard-card bg-primary text-white text-white-shadow">
+                    Total Sales
+                    <br>$1,234,567
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-success text-white text-white-shadow">
+                    New Users
+                    <br>850
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-warning text-dark">
+                    Pending Orders
+                    <br>42
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-danger text-white text-white-shadow">
+                    Critical Alerts
+                    <br>5
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-info text-dark">
+                    Support Tickets
+                    <br>12
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-secondary text-white text-white-shadow">
+                    Revenue Growth
+                    <br>+15%
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-dark text-white text-white-shadow">
+                    Website Visitors
+                    <br>25,000
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dashboard-card bg-light text-dark border">
+                    Conversion Rate
+                    <br>3.2%
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3>Text Color Utilities</h3>
+        <p class="text-primary">This text is colored primary.</p>
+        <p class="text-secondary">This text is colored secondary.</p>
+        <p class="text-success">This text is colored success.</p>
+        <p class="text-danger">This text is colored danger.</p>
+        <p class="text-warning bg-dark p-1 d-inline-block">This text is colored warning (on dark background for visibility).</p>
+        <p class="text-info">This text is colored info.</p>
+        <p class="text-light bg-dark p-1 d-inline-block">This text is colored light (on dark background for visibility).</p>
+        <p class="text-dark">This text is colored dark.</p>
+        <p class="text-body">This text is colored body (default text color).</p>
+        <p class="text-muted">This text is muted.</p>
+        <a href="#" class="text-decoration-none text-danger">This is a red link.</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 13.2:
+Use bg-gradient with bg-dark and white text.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .hero-section {
+            height: 300px; /* Give some height to see the gradient */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white overlay */
+            padding: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section bg-dark bg-gradient text-white">
+        <div class="content-box">
+            <h1 class="display-4 mb-3">Welcome to Our Platform</h1>
+            <p class="lead">Experience the difference with our cutting-edge solutions.</p>
+            <button class="btn btn-light btn-lg mt-3">Learn More</button>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3>Gradient Background Section</h3>
+        <p>
+            The section above combines `bg-dark` with `bg-gradient` to create a subtle linear gradient effect, along with `text-white` for contrasting text.
+            This creates a modern and visually appealing background.
+        </p>
+
+        <div class="p-5 mb-4 rounded-3 text-white" style="background-color: #8c738c;">
+            <div class="container-fluid py-5 bg-gradient">
+                <h1 class="display-5 fw-bold">Another Gradient Example</h1>
+                <p class="col-md-8 fs-4">This demonstrates a gradient applied over a custom background color, leveraging Bootstrap's utilities for a unique look.</p>
+                <button class="btn btn-light btn-lg" type="button">Call to action</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--14. Display and Visibility
+Exercise 14.1:
+Use d-none, d-md-block, d-lg-flex to hide/show sections based on screen size.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and Visibility Utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .display-box {
+            background-color: #d1ecf1; /* Light info background */
+            border: 1px solid #00a4ff; /* Info border */
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #0c5460;
+        }
+        .bg-danger-light {
+            background-color: #f8d7da; /* Light danger background */
+            border-color: #dc3545;
+        }
+        .bg-success-light {
+            background-color: #d4edda; /* Light success background */
+            border-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Display and Visibility Examples</h2>
+        <p>Resize your browser window to see elements appear/disappear or change display type.</p>
+
+        <div class="display-box bg-danger-light d-none d-md-block">
+            <h3>Hidden on Small, Block on Medium+</h3>
+            <p>You will only see me on tablets and larger screens.</p>
+        </div>
+
+        <div class="display-box bg-success-light d-none d-lg-flex flex-column justify-content-center">
+            <h3>Hidden on Small/Medium, Flex on Large+</h3>
+            <p>I will only appear on desktops and larger screens, displayed as a flex container.</p>
+        </div>
+
+        <div class="display-box bg-warning text-dark d-block d-md-none">
+            <h3>Block on Small, Hidden on Medium+</h3>
+            <p>I am only visible on mobile phones.</p>
+        </div>
+
+        <div class="display-box">
+            <h3>Always Visible (Default Display)</h3>
+            <p>I am always here, regardless of screen size.</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--Exercise 14.2:
+Create a responsive sidebar that only shows on tablets and above.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .sidebar {
+            background-color: #f0f0f0; /* Light gray background for sidebar */
+            padding: 20px;
+            border-right: 1px solid #e0e0e0;
+            min-height: calc(100vh - 56px); /* Adjust height, e.g., if there's a fixed navbar */
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .sidebar h4 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .sidebar .nav-link {
+            color: #555;
+            padding: 8px 0;
+        }
+        .sidebar .nav-link:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">App Title</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <h4 class="mb-3">Dashboard Menu</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#file-earmark"/></svg>
+                                Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people"/></svg>
+                                Customers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#bar-chart"/></svg>
+                                Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#layers"/></svg>
+                                Integrations
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 main-content">
+                <h1>Main Content Area</h1>
+                <p>This is the main content of the page. The sidebar to the left will only be visible on tablet screens (medium breakpoint) and larger.</p>
+                <p>On mobile devices, the sidebar is hidden, and this content will take up the full width.</p>
+                <p>You can adjust the `col-md-*` classes to change the width of the sidebar and content area on larger screens.</p>
+                <div style="height: 600px; background-color: #f0f8ff; border: 1px dashed #ced4da; display: flex; align-items: center; justify-content: center; opacity: 0.7;">
+                    Scroll down to see the sticky sidebar in action (if content is long enough).
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="home" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L8.354 1.146Z"/>
+        </symbol>
+        <symbol id="file-earmark" viewBox="0 0 16 16">
+            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+        </symbol>
+        <symbol id="people" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </symbol>
+        <symbol id="bar-chart" viewBox="0 0 16 16">
+            <path d="M4 11H2v3h2v-3zm5-5H7v8h2V6zm5-5h-2v12h2V1z"/>
+        </symbol>
+        <symbol id="layers" viewBox="0 0 16 16">
+            <path d="M.5 1.5a.5.5 0 0 0-1 0v13a.5.5 0 0 0 1 0V1.5zm.5 1.5a.5.5 0 0 0 0 13a.5.5 0 0 0 0-13zm1.5-1.5a.5.5 0 0 0-1 0v13a.5.5 0 0 0 1 0V1.5zm.5 1.5a.5.5 0 0 0 0 13a.5.5 0 0 0 0-13zm1.5-1.5a.5.5 0 0 0-1 0v13a.5.5 0 0 0 1 0V1.5zm.5 1.5a.5.5 0 0 0 0 13a.5.5 0 0 0 0-13z"/>
+        </symbol>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--15. Borders, Shadows, and Rounded Corners
+Exercise 15.1:
+Add border utilities like border, border-primary, border-3, and rounded-circle to an image.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Borders and Rounded Corners</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .image-container {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .img-fluid-custom {
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto;
+            margin-bottom: 15px; /* Space between image and label */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Image Border and Rounded Corner Examples</h2>
+
+        <div class="row">
+            <div class="col-md-4 image-container">
+                <img src="https://via.placeholder.com/150/007bff/FFFFFF?text=Basic+Border"
+                     class="img-fluid-custom border border-primary"
+                     alt="Image with primary border">
+                <p><code>.border .border-primary</code></p>
+            </div>
+
+            <div class="col-md-4 image-container">
+                <img src="https://via.placeholder.com/150/28a745/FFFFFF?text=Thick+Border"
+                     class="img-fluid-custom border border-success border-3"
+                     alt="Image with thick border">
+                <p><code>.border .border-success .border-3</code></p>
+            </div>
+
+            <div class="col-md-4 image-container">
+                <img src="https://via.placeholder.com/150/6f42c1/FFFFFF?text=Circle"
+                     class="img-fluid-custom border border-info border-5 rounded-circle"
+                     alt="Image with rounded circle">
+                <p><code>.border .border-info .border-5 .rounded-circle</code></p>
+            </div>
+
+            <div class="col-md-4 image-container">
+                <img src="https://via.placeholder.com/150/ffc107/343a40?text=Rounded"
+                     class="img-fluid-custom border border-warning rounded-3"
+                     alt="Image with rounded corners">
+                <p><code>.border .border-warning .rounded-3</code></p>
+            </div>
+
+            <div class="col-md-4 image-container">
+                <img src="https://via.placeholder.com/150/dc3545/FFFFFF?text=Top+Rounded"
+                     class="img-fluid-custom rounded-top"
+                     alt="Image with top rounded corners">
+                <p><code>.rounded-top</code></p>
+            </div>
+
+            <div class="col-md-4 image-container">
+                <img src="https://via.placeholder.com/150/17a2b8/FFFFFF?text=Bottom+Rounded"
+                     class="img-fluid-custom rounded-bottom"
+                     alt="Image with bottom rounded corners">
+                <p><code>.rounded-bottom</code></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--Exercise 15.2:
+Use shadow, shadow-lg and rounded-pill in a card.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Shadows and Rounded Pill</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .card-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .custom-card {
+            max-width: 350px;
+            margin: 0 auto;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .badge-pill-custom {
+            font-size: 1.2rem;
+            padding: 0.5rem 1.2rem;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Card Shadows and Rounded Corners Examples</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col card-container">
+                <div class="card custom-card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Default Shadow</h5>
+                        <p class="card-text">This card has a standard shadow.</p>
+                    </div>
+                </div>
+                <p class="mt-2"><code>.shadow</code></p>
+            </div>
+
+            <div class="col card-container">
+                <div class="card custom-card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Large Shadow</h5>
+                        <p class="card-text">This card features a prominent large shadow.</p>
+                    </div>
+                </div>
+                <p class="mt-2"><code>.shadow-lg</code></p>
+            </div>
+
+            <div class="col card-container">
+                <div class="card custom-card shadow-none border">
+                    <div class="card-body">
+                        <h5 class="card-title">No Shadow</h5>
+                        <p class="card-text">This card explicitly has no shadow.</p>
+                    </div>
+                </div>
+                <p class="mt-2"><code>.shadow-none</code></p>
+            </div>
+
+            <div class="col card-container">
+                <div class="card custom-card rounded-pill bg-info text-white">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="card-title">Rounded Pill Card</h5>
+                        <p class="card-text">This card has extreme rounded corners.</p>
+                    </div>
+                </div>
+                <p class="mt-2"><code>.rounded-pill</code></p>
+            </div>
+
+            <div class="col card-container">
+                <div class="card custom-card shadow rounded-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Rounded Corners + Shadow</h5>
+                        <p class="card-text">A common combination for cards.</p>
+                    </div>
+                </div>
+                <p class="mt-2"><code>.shadow .rounded-4</code></p>
+            </div>
+
+            <div class="col card-container">
+                <div class="card custom-card shadow rounded-top rounded-bottom-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Top Rounded Only</h5>
+                        <p class="card-text">Only the top corners are rounded.</p>
+                    </div>
+                </div>
+                <p class="mt-2"><code>.shadow .rounded-top .rounded-bottom-0</code></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--16. Positioning Utilities
+Exercise 16.1:
+Create a fixed footer using position-fixed bottom-0.--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Footer Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            min-height: 150vh; /* Ensure content is long enough to scroll */
+            padding-bottom: 56px; /* Space for the fixed footer to prevent content overlap */
+        }
+        .content-section {
+            padding: 30px;
+            margin-bottom: 20px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .fixed-footer {
+            height: 56px; /* Set a height for the footer */
+            line-height: 56px; /* Vertically center text in footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Content Area</h1>
+        <p>Scroll down to see the fixed footer in action. The footer will remain at the bottom of the viewport even when the page content is scrolled.</p>
+
+        <div class="content-section">
+            <h4>Section 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="content-section">
+            <h4>Section 2</h4>
+            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sit amet odio. Etiam lectus turpis, dapibus vitae, ornare in, egestas eget, ipsum. Proin interdum aliquet egestas. Morbi quis elit eget turpis interdum gravida. Aenean at mauris. Cras sed odio ut nulla ultrices adipiscing. Nam elit magna, hendrerit sit amet, tincidunt ac, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="content-section">
+            <h4>Section 3 (More Content)</h4>
+            <p>Vestibulum quis quam. Integer malesuada. In in enim a arcu ornare elementum. Proin a velit. Maecenas sed dui. Nulla nulla. Nulla facilisi. Proin interdum aliquet egestas. Morbi quis elit eget turpis interdum gravida. Aenean at mauris. Cras sed odio ut nulla ultrices adipiscing. Nam elit magna, hendrerit sit amet, tincidunt ac, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Another paragraph to make the page scrollable. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom bg-dark text-white text-center py-2 fixed-footer">
+        <div class="container">
+            &copy; 2023 My Company. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 16.2:
+Use position-relative and position-absolute to overlay a badge over an image.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Badge Overlay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .image-overlay-container {
+            width: 300px; /* Define a fixed width for the container */
+            height: 200px; /* Define a fixed height for the container */
+            overflow: hidden; /* Hide anything outside the container */
+            margin: 30px auto; /* Center the example container */
+            border: 1px solid #ccc;
+            position: relative; /* Crucial: make this the positioning context for absolute children */
+        }
+        .image-overlay-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container */
+            display: block; /* Remove extra space below image */
+        }
+        .overlay-badge {
+            position: absolute; /* Position relative to the nearest positioned ancestor (image-overlay-container) */
+            top: 10px; /* Distance from the top of the container */
+            right: 10px; /* Distance from the right of the container */
+            /* Additional styling for the badge */
+            padding: 0.5em 0.8em;
+            font-size: 0.85em;
+            border-radius: 0.25rem;
+            color: white;
+            background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red */
+            z-index: 10; /* Ensure badge is above image */
+        }
+        /* Example of another badge position */
+        .overlay-badge-bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 0.5em 0.8em;
+            font-size: 0.85em;
+            border-radius: 0.25rem;
+            color: white;
+            background-color: rgba(0, 123, 255, 0.7); /* Semi-transparent blue */
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Image Overlay with Badge</h2>
+        <p>This example demonstrates how to position elements relative to their parent using <code>position-relative</code> and <code>position-absolute</code>, effectively overlaying a badge on an image.</p>
+
+        <div class="image-overlay-container">
+            <img src="https://via.placeholder.com/300x200?text=Product+Image" alt="Product Thumbnail">
+            <span class="overlay-badge">NEW!</span>
+            <span class="overlay-badge-bottom-left">Limited Stock</span>
+        </div>
+
+        <div class="image-overlay-container">
+            <img src="https://via.placeholder.com/300x200?text=Sale+Item" alt="Sale Item">
+            <span class="overlay-badge bg-success">SALE</span>
+            <span class="overlay-badge-bottom-left bg-warning text-dark">20% OFF</span>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--17. Icons with Bootstrap Icons
+Exercise 17.1:
+Install and use Bootstrap Icons in a webpage: add social media icons in the footer.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Icons in Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            min-height: 100vh; /* Ensure content is long enough to push footer down */
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex-grow: 1; /* Allow content to take up available space */
+            padding: 30px 0;
+        }
+        .footer-social-icons .bi {
+            font-size: 1.5rem; /* Make icons a bit larger */
+            margin: 0 10px; /* Space between icons */
+            color: #fff; /* White icons on dark background */
+            transition: color 0.3s ease;
+        }
+        .footer-social-icons .bi:hover {
+            color: #0d6efd; /* Bootstrap primary blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Website</a>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <h1>Welcome to My Page!</h1>
+        <p>This is the main content area. We will add some social media icons to the footer below.</p>
+        <p>Scroll down to see the footer with Bootstrap Icons.</p>
+        <div style="height: 400px; background-color: #f8f9fa; border: 1px dashed #ced4da; display: flex; align-items: center; justify-content: center; opacity: 0.7;">
+            More content here...
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-2">&copy; 2023 My Company. All rights reserved.</p>
+            <div class="footer-social-icons">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 17.2:
+Replace text buttons with icon-only buttons using Bootstrap Icons.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon-Only Buttons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        .icon-btn-group .btn {
+            width: 44px; /* Fixed width for square buttons */
+            height: 44px; /* Fixed height for square buttons */
+            display: inline-flex; /* Use flexbox to center icon */
+            align-items: center;
+            justify-content: center;
+            padding: 0; /* Remove default padding */
+        }
+        .icon-btn-group .btn .bi {
+            font-size: 1.2rem; /* Size the icon appropriately */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Icon-Only Buttons Example</h2>
+
+        <h3>Basic Icon Buttons</h3>
+        <div class="mb-4">
+            <button type="button" class="btn btn-primary me-2" aria-label="Add Item">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+            <button type="button" class="btn btn-danger me-2" aria-label="Delete Item">
+                <i class="bi bi-trash"></i>
+            </button>
+            <button type="button" class="btn btn-warning text-dark me-2" aria-label="Edit Item">
+                <i class="bi bi-pencil"></i>
+            </button>
+            <button type="button" class="btn btn-info me-2" aria-label="Share">
+                <i class="bi bi-share"></i>
+            </button>
+            <button type="button" class="btn btn-success me-2" aria-label="Download">
+                <i class="bi bi-download"></i>
+            </button>
+        </div>
+
+        <h3>Icon Buttons in a Group (Toolbar-like)</h3>
+        <div class="btn-group icon-btn-group" role="group" aria-label="Toolbar actions">
+            <button type="button" class="btn btn-secondary" aria-label="Bold Text">
+                <i class="bi bi-type-bold"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" aria-label="Italic Text">
+                <i class="bi bi-type-italic"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" aria-label="Underline Text">
+                <i class="bi bi-type-underline"></i>
+            </button>
+        </div>
+
+        <h3 class="mt-4">Icon Buttons with Text for Context</h3>
+        <button type="button" class="btn btn-primary me-2">
+            <i class="bi bi-download me-2"></i> Download
+        </button>
+        <button type="button" class="btn btn-success">
+            <i class="bi bi-check-circle me-2"></i> Confirm
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--18. Bootstrap 5 JavaScript Plugins
+Exercise 18.1:
+Add a modal popup triggered by a button.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Modal Popup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Modal Popup Example</h2>
+        <p>Click the button below to open a Bootstrap modal dialog.</p>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Launch demo modal
+        </button>
+
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Modal Title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is the content of your modal popup. It can contain any HTML elements like forms, text, images, etc.</p>
+                        <p>You can close me by clicking the 'Close' button, the 'Save changes' button, or by pressing the ESC key.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!---
+Exercise 18.2:
+Create a collapsible accordion using accordion and Bootstrap JavaScript behavior-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Accordion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Accordion Example</h2>
+        <p>Click on the accordion headers to expand or collapse their content panels.</p>
+
+        <div class="accordion" id="myAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#myAccordion">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default. If you open this item, the first item will collapse. This is because both items share the same <code>data-bs-parent="#myAccordion"</code>, making them part of the same accordion group.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#myAccordion">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is also hidden by default. You can put various types of content here, including text, images, lists, or even other Bootstrap components.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--19. Customization with Sass
+Exercise 19.1:
+Set up a Bootstrap 5 project with Sass using npm.
+Exercise 19.2:
+Customize primary colors and border radius via _variables.scss and recompile Bootstrap.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 with Sass</title>
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Custom Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-primary">Hello, Custom Bootstrap!</h1>
+        <p class="lead">This page is styled with a Bootstrap build that you compile yourself using Sass.</p>
+        <button class="btn btn-primary">Custom Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+
+        <div class="card mt-4 p-3 border border-primary">
+            <p>Observe the primary color of the navbar, heading, button, and card border. We will change this in the next exercise.</p>
+        </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

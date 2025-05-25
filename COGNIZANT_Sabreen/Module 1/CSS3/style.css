@@ -1,0 +1,216 @@
+/* styles.css */
+
+/* Reset margin/padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background & font */
+body {
+    background-color: #e6f2ff; /* Light blue fallback */
+    background-image: url('bgimage.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styles */
+nav {
+    background-color: rgba(0, 102, 204, 0.85);
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+/* Link states */
+nav a:link {
+    color: #cce0ff;
+}
+
+nav a:visited {
+    color: #99c2ff;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+nav a:active {
+    color: #ff9900;
+}
+
+/* Remove bullets in nav if it was a list */
+/* If nav used ul/li, we could do: */
+/*
+nav ul {
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+*/
+
+/* Welcome banner */
+#welcomeBanner {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* Highlight class */
+.highlight {
+    font-weight: bold;
+    color: #004080;
+}
+
+/* Section headers with gradient */
+section h2 {
+    background: linear-gradient(to right, #0066cc, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 1em;
+    letter-spacing: 0.02em;
+}
+
+/* Grouping selector example: h3 and p styling */
+h3, p {
+    color: #222;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+table caption {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f9ff;
+}
+
+/* Event images in table */
+td img {
+    width: 100px;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Form Styling */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline-offset: 2px;
+}
+
+/* Outline on focus */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #007bff;
+}
+
+/* Submit button */
+form input[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Box model example: eventCard */
+.eventCard {
+    border: 2px solid #007bff;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Multi-column text for news article */
+.news-article {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    margin: 20px 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    table td img {
+        width: 80px;
+    }
+
+    form {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+}
